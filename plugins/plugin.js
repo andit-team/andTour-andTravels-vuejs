@@ -1,5 +1,7 @@
 import Vue from 'vue'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 // import VueAwesomeSwiper from 'vue-awesome-swiper/dist/ssr'
+// import VueAwesomeSwiper from 'vue-awesome-swiper'
 // import Vue2Filters from 'vue2-filters'
 // import { VueMasonryPlugin } from 'vue-masonry'
 // import InfiniteLoading from 'vue-infinite-loading'
@@ -12,6 +14,7 @@ import { IconsPlugin } from 'bootstrap-vue'
 // import VueCookies from 'vue-cookies'
 
 // Vue.use(VueAwesomeSwiper)
+Vue.use(VueAwesomeSwiper)
 // Vue.use(Vue2Filters)
 // Vue.use(VueMasonryPlugin)
 // Vue.use(InfiniteLoading)

@@ -20,7 +20,9 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '@/assets/fonts/flaticon.css',
+    '@/assets/css/fontawesome.all.min.css',
     '@/assets/scss/app.scss',
+    // 'swiper/css/swiper.css',
     // 'swiper/dist/css/swiper.css'
   ],
 

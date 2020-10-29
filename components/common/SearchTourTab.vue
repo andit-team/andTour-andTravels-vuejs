@@ -1,156 +1,265 @@
 <template>
   <!-- Ab start-->
-  <section id="ab-home">
+  <section id="ab-home" v-bind:style="{ 'background-image': `url(${imagepath})` }">
     <div class="container">
       <div class="heading">
         <h2>ab-section</h2>
       </div>
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-12 main-com">
-          <nav>
-            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
-                aria-controls="nav-home" aria-selected="true">Search Tour</a>
-              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
-                aria-controls="nav-profile" aria-selected="false">
-                <i class="fas fa-city amr"></i> Hotel
-              </a>
-            </div>
-          </nav>
-          <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-              <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                  <div class="booking-info">
-                    <div class="select-box">
-                      <span class="sec-po"><i class="fas fa-map-marker-alt"></i></span>
-                      <select>
-                        <option value="0"> Destination</option>
-                        <option value="1">Audi</option>
-                        <option value="2">BMW</option>
-                        <option value="3">Citroen</option>
-                      </select>
-                      <i class="fas fa-angle-down map-io"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                  <div class="booking-info">
+          <b-card no-body>
+          <b-tabs card>
+            <b-tab title="Search Tour" active>
+              <b-card-text>
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="booking-info">
-                      <div id="datepicker-2" class="input-group date" data-date-format="mm-dd-yyyy">
-                        <input class="form-control" type="text" placeholder="Check In" />
-                        <span class="input-group-addon sec-po"><i class="far fa-calendar-alt"></i></span>
+                      <div class="select-box">
+                        <span class="sec-po"><i class="fas fa-map-marker-alt"></i></span>
+                        <select>
+                          <option value="0"> Destination</option>
+                          <option value="1">Audi</option>
+                          <option value="2">BMW</option>
+                          <option value="3">Citroen</option>
+                        </select>
+                        <i class="fas fa-angle-down map-io"></i>
                       </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <div class="booking-info">
+                        <b-form-datepicker
+                        placeholder="Checkin"
+                        id="datepicker-dateformat2"
+                        :date-format-options="{ year: 'numeric', month: 'numeric', day: 'numeric' }"
+                        locale="en"
+                        class="form-control"
+                        ></b-form-datepicker>
+                        <i class="fas fa-angle-down map-io"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <b-form-datepicker
+                      placeholder="Checkin"
+                      id="datepicker-dateformat3"
+                      :date-format-options="{ year: 'numeric', month: 'numeric', day: 'numeric' }"
+                      locale="en"
+                      class="form-control"
+                      ></b-form-datepicker>
                       <i class="fas fa-angle-down map-io"></i>
                     </div>
                   </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                  <div class="booking-info">
-                    <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
-                      <input class="form-control" type="text" placeholder="Check Out" />
-                      <span class="input-group-addon sec-po"><i class="far fa-calendar-alt"></i></span>
-                    </div>
-                    <i class="fas fa-angle-down map-io"></i>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                  <div class="booking-info">
-                    <div class="select-box">
-                      <span class="sec-po"><i class="fas fa-bed"></i></span>
-                      <select>
-                        <option value="0"> Hotel</option>
-                        <option value="1">Audi</option>
-                        <option value="2">BMW</option>
-                        <option value="3">Citroen</option>
-                      </select>
-                      <i class="fas fa-angle-down map-io"></i>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <div class="select-box">
+                        <span class="sec-po"><i class="fas fa-bed"></i></span>
+                        <select>
+                          <option value="0"> Hotel</option>
+                          <option value="1">Audi</option>
+                          <option value="2">BMW</option>
+                          <option value="3">Citroen</option>
+                        </select>
+                        <i class="fas fa-angle-down map-io"></i>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="col-lg-12">
-                  <div class="book-ctn">
-                    <a href="#!" class="btn btn-2 pad">Search Now</a>
                   </div>
-                </div>
+              </b-card-text>
+            </b-tab>
+            <b-tab title="Hotel">
+              <b-card-text>
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <div class="select-box">
+                        <span class="sec-po"><i class="fas fa-map-marker-alt"></i></span>
+                        <select>
+                          <option value="0"> Destination</option>
+                          <option value="1">Audi</option>
+                          <option value="2">BMW</option>
+                          <option value="3">Citroen</option>
+                        </select>
+                        <i class="fas fa-angle-down map-io"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <div class="booking-info">
+                        <b-form-datepicker
+                        placeholder="Checkin"
+                        id="datepicker-dateformat2"
+                        :date-format-options="{ year: 'numeric', month: 'numeric', day: 'numeric' }"
+                        locale="en"
+                        class="form-control"
+                        ></b-form-datepicker>
+                        <i class="fas fa-angle-down map-io"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <b-form-datepicker
+                      placeholder="Checkin"
+                      id="datepicker-dateformat3"
+                      :date-format-options="{ year: 'numeric', month: 'numeric', day: 'numeric' }"
+                      locale="en"
+                      class="form-control"
+                      ></b-form-datepicker>
+                      <i class="fas fa-angle-down map-io"></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <div class="select-box">
+                        <span class="sec-po"><i class="fas fa-bed"></i></span>
+                        <select>
+                          <option value="0"> Hotel</option>
+                          <option value="1">Audi</option>
+                          <option value="2">BMW</option>
+                          <option value="3">Citroen</option>
+                        </select>
+                        <i class="fas fa-angle-down map-io"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  </div>
+              </b-card-text>
+            </b-tab>
+            <b-tab title="Flights">
+              <b-card-text>
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <div class="select-box">
+                        <span class="sec-po"><i class="fas fa-map-marker-alt"></i></span>
+                        <select>
+                          <option value="0"> Destination</option>
+                          <option value="1">Audi</option>
+                          <option value="2">BMW</option>
+                          <option value="3">Citroen</option>
+                        </select>
+                        <i class="fas fa-angle-down map-io"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <div class="booking-info">
+                        <b-form-datepicker
+                        placeholder="Checkin"
+                        id="datepicker-dateformat2"
+                        :date-format-options="{ year: 'numeric', month: 'numeric', day: 'numeric' }"
+                        locale="en"
+                        class="form-control"
+                        ></b-form-datepicker>
+                        <i class="fas fa-angle-down map-io"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <b-form-datepicker
+                      placeholder="Checkin"
+                      id="datepicker-dateformat3"
+                      :date-format-options="{ year: 'numeric', month: 'numeric', day: 'numeric' }"
+                      locale="en"
+                      class="form-control"
+                      ></b-form-datepicker>
+                      <i class="fas fa-angle-down map-io"></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <div class="select-box">
+                        <span class="sec-po"><i class="fas fa-bed"></i></span>
+                        <select>
+                          <option value="0"> Hotel</option>
+                          <option value="1">Audi</option>
+                          <option value="2">BMW</option>
+                          <option value="3">Citroen</option>
+                        </select>
+                        <i class="fas fa-angle-down map-io"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  </div>
+              </b-card-text>
+            </b-tab>
+            <b-tab title="Buses">
+              <b-card-text>
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <div class="select-box">
+                        <span class="sec-po"><i class="fas fa-map-marker-alt"></i></span>
+                        <select>
+                          <option value="0"> Destination</option>
+                          <option value="1">Audi</option>
+                          <option value="2">BMW</option>
+                          <option value="3">Citroen</option>
+                        </select>
+                        <i class="fas fa-angle-down map-io"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <div class="booking-info">
+                        <b-form-datepicker
+                        placeholder="Checkin"
+                        id="datepicker-dateformat2"
+                        :date-format-options="{ year: 'numeric', month: 'numeric', day: 'numeric' }"
+                        locale="en"
+                        class="form-control"
+                        ></b-form-datepicker>
+                        <i class="fas fa-angle-down map-io"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <b-form-datepicker
+                      placeholder="Checkin"
+                      id="datepicker-dateformat3"
+                      :date-format-options="{ year: 'numeric', month: 'numeric', day: 'numeric' }"
+                      locale="en"
+                      class="form-control"
+                      ></b-form-datepicker>
+                      <i class="fas fa-angle-down map-io"></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="booking-info">
+                      <div class="select-box">
+                        <span class="sec-po"><i class="fas fa-bed"></i></span>
+                        <select>
+                          <option value="0"> Hotel</option>
+                          <option value="1">Audi</option>
+                          <option value="2">BMW</option>
+                          <option value="3">Citroen</option>
+                        </select>
+                        <i class="fas fa-angle-down map-io"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  </div>
+              </b-card-text>
+            </b-tab>
+            <div class="col-lg-12">
+              <div class="book-ctn">
+                <a href="#!" class="btn btn-2 pad">Search Now</a>
               </div>
             </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-              <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                  <div class="booking-info">
-                    <div class="select-box">
-                      <span class="sec-po"><i class="fas fa-map-marker-alt"></i></span>
-                      <select>
-                        <option value="0"> Destination</option>
-                        <option value="1">Audi</option>
-                        <option value="2">BMW</option>
-                        <option value="3">Citroen</option>
-                      </select>
-                      <i class="fas fa-angle-down map-io"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                  <div class="booking-info">
-                    <div class="booking-info">
-                      <div id="datepicker-3" class="input-group date" data-date-format="mm-dd-yyyy">
-                        <input class="form-control" type="text" placeholder="Check In" />
-                        <span class="input-group-addon sec-po"><i class="far fa-calendar-alt"></i></span>
-                      </div>
-                      <i class="fas fa-angle-down map-io"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                  <div class="booking-info">
-                    <div id="datepicker-4" class="input-group date" data-date-format="mm-dd-yyyy">
-                      <input class="form-control" type="text" placeholder="Check Out" />
-                      <span class="input-group-addon sec-po"><i class="far fa-calendar-alt"></i></span>
-                    </div>
-                    <i class="fas fa-angle-down map-io"></i>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                  <div class="booking-info">
-                    <div class="select-box">
-                      <span class="sec-po"><i class="fas fa-bed"></i></span>
-                      <select class="marder">
-                        <option value="0"> Hotel</option>
-                        <option value="1">Audi</option>
-                        <option value="2">BMW</option>
-                        <option value="3">Citroen</option>
-                      </select>
-                      <i class="fas fa-angle-down map-io"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                  <div class="all-class">
-                    <div class="bugest-info">
-                      <span>
-                        Budget Now:
-                      </span>
-                    </div>
-                    <div class="buget">
-                      <span class="ranger-1"></span>
-                      <span class="ranger-2"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="book-ctn">
-                    <a href="#!" class="btn btn-2 pad">Search Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="valedoter">
-            <h2>Home</h2>
-          </div>
+          </b-tabs>
+        </b-card>
         </div>
 
         <div class="col-lg-6 col-md-12">
@@ -170,7 +279,21 @@
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
-          <div class="ab-slider">
+
+          <!-- <div v-swiper:mySwiper="swiperOption">
+            <div class="swiper-wrapper">
+            
+             <div class="swiper-slide"><img :src="require('@/assets/img/common-img/about-img.png')" alt="img" /></div>
+             <div class="swiper-slide"><img :src="require('@/assets/img/common-img/about-img.png')" alt="img" /></div>
+             <div class="swiper-slide"><img :src="require('@/assets/img/common-img/about-img.png')" alt="img" /></div>
+             <div class="swiper-slide"><img :src="require('@/assets/img/common-img/about-img.png')" alt="img" /></div>
+
+
+              <div class="swiper-button-prev testi_prev" slot="button-prev"><i class="fas fa-angle-left"></i></div>
+              <div class="swiper-button-next testi_next" slot="button-next"><i class="fas fa-angle-right"></i></div>
+            </div>
+          </div> -->
+          <!-- <div class="ab-slider">
             <div class="slider-main-ab owl-carousel owl-theme">
               <img src="assets/img/common-img/about-img.png" alt="img" />
               <img src="assets/img/common-img/about-img.png" alt="img" />
@@ -180,7 +303,74 @@
               <img src="assets/img/common-img/about-img.png" alt="img" />
               <img src="assets/img/common-img/about-img.png" alt="img" />
             </div>
+          </div> -->
+
+          <div class="col">
+            <div v-swiper:mySwiper="swiperOption">
+              <div class="swiper-wrapper popular-services-slider-wrap">
+                <!-- <div
+                  class="swiper-slide"
+                  v-for="(vehicle,index) in vehicles"
+                  :key="index"
+                > -->
+                  <!-- Home vehicle box Start -->
+                  <!-- <VehicleItem
+                  :vehicle="vehicle"
+                  :index="index"
+                  /> -->
+                  <!-- Home vehicle box End -->
+                <!-- </div> -->
+
+
+                <div class="swiper-slide">
+                  <!-- Home vehicle box Start -->
+                  <nuxt-link to="/rides/ride-details" class="home-service-box">
+                      <img :src="require('@/assets/img/common-img/about-img.png')" alt="img" />
+                  </nuxt-link>
+                  <!-- Home vehicle box End -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- Home vehicle box Start -->
+                  <nuxt-link to="/rides/ride-details" class="home-service-box">
+                      <img :src="require('@/assets/img/common-img/about-img.png')" alt="img" />
+                  </nuxt-link>
+                  <!-- Home vehicle box End -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- Home vehicle box Start -->
+                  <nuxt-link to="/rides/ride-details" class="home-service-box">
+                      <img :src="require('@/assets/img/common-img/about-img.png')" alt="img" />
+                  </nuxt-link>
+                  <!-- Home vehicle box End -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- Home vehicle box Start -->
+                  <nuxt-link to="/rides/ride-details" class="home-service-box">
+                      <img :src="require('@/assets/img/common-img/about-img.png')" alt="img" />
+                  </nuxt-link>
+                  <!-- Home vehicle box End -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- Home vehicle box Start -->
+                  <nuxt-link to="/rides/ride-details" class="home-service-box">
+                      <img :src="require('@/assets/img/common-img/about-img.png')" alt="img" />
+                  </nuxt-link>
+                  <!-- Home vehicle box End -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- Home vehicle box Start -->
+                  <nuxt-link to="/rides/ride-details" class="home-service-box">
+                      <img :src="require('@/assets/img/common-img/about-img.png')" alt="img" />
+                  </nuxt-link>
+                  <!-- Home vehicle box End -->
+                </div>
+
+              </div>
+              <div class="swiper-button-prev testi_prev" slot="button-prev"><i class="fas fa-angle-left"></i></div>
+              <div class="swiper-button-next testi_next" slot="button-next"><i class="fas fa-angle-right"></i></div>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -190,10 +380,51 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      imagepath: require('@/assets/img/common-img/map.png'),
+      swiperOption: {
+        slidesPerView: 4,
+        navigation: {
+          nextEl: '.testi_next',
+          prevEl: '.testi_prev'
+        },
+        spaceBetween: 20,
+        freeMode: false,
+        breakpoints: {
+          1199: {
+            slidesPerView: 3,
+            spaceBetween: 20
+          },
+          991: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          }
+        }
+      },
+    }
+  }
 }
 </script>
 
 <style>
-
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+	pointer-events: auto;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next, .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+	background-image: none;
+}
+.swiper-button-next i, .swiper-button-prev i {
+	font-size: 19px;
+	color: var(--heading-color);
+}
+.swiper-button-prev, .swiper-button-next {
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+}
 </style>
