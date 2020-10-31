@@ -22,13 +22,15 @@ export default {
     '@/assets/fonts/flaticon.css',
     '@/assets/css/fontawesome.all.min.css',
     '@/assets/scss/app.scss',
-    // 'swiper/css/swiper.css',
+    'swiper/swiper.scss',
+    // 'vue-image-lightbox/dist/vue-image-lightbox.min.css'
     // 'swiper/dist/css/swiper.css'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~/plugins/plugin.js' },
+    // {src: 'path/to/dist/vue-image-lightbox.js'}
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

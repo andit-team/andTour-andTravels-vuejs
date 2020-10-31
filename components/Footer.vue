@@ -7,7 +7,7 @@
         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
           <div class="all-fott-cov">
             <div class="footer0logo">
-              <a href="#"><img src="assets/img/logo.png" alt="img" /></a>
+              <a href="#"><img :src="require('@/assets/img/logo.png')" alt="img" /></a>
             </div>
             <div class="footer-para">
               <p>
@@ -65,7 +65,7 @@
             <div class="post-cover-foot">
               <div class="pos-rece-1">
                 <div class="post-rect-img">
-                  <a href="blog-single.html"><img src="assets/img/common-img/footer-blog.png" alt="" /></a>
+                  <a href="blog-single.html"><img :src="require('@/assets/img/common-img/footer-blog.png')" alt="" /></a>
                 </div>
                 <div class="podt-text-1">
                   <p>
@@ -77,7 +77,7 @@
               </div>
               <div class="pos-rece-1">
                 <div class="post-rect-img">
-                  <a href="blog-single.html"><img src="assets/img/common-img/footer-blog-1.png" alt="" /></a>
+                  <a href="blog-single.html"><img :src="require('@/assets/img/common-img/footer-blog-1.png')" alt="" /></a>
                 </div>
                 <div class="podt-text-1">
                   <p>
@@ -89,7 +89,7 @@
               </div>
               <div class="pos-rece-1">
                 <div class="post-rect-img">
-                  <a href="blog-single.html"><img src="assets/img/common-img/footer-blog-2.png" alt="" /></a>
+                  <a href="blog-single.html"><img :src="require('@/assets/img/common-img/footer-blog-2.png')" alt="" /></a>
                 </div>
                 <div class="podt-text-1">
                   <p>

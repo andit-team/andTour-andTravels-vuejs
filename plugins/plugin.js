@@ -1,29 +1,13 @@
 import Vue from 'vue'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-// import VueAwesomeSwiper from 'vue-awesome-swiper/dist/ssr'
-// import VueAwesomeSwiper from 'vue-awesome-swiper'
-// import Vue2Filters from 'vue2-filters'
-// import { VueMasonryPlugin } from 'vue-masonry'
-// import InfiniteLoading from 'vue-infinite-loading'
-// import firebase from 'firebase/app'
-// import PayPal from 'vue-paypal-checkout'
-// import VueLazyLoad from 'vue-lazyload'
-// import ProductZoomer from 'vue-product-zoomer'
-// import VueScrollTo from 'vue-scrollto'
+import VueLazyLoad from 'vue-lazyload'
+// import LightBox from 'vue-image-lightbox'
 import { IconsPlugin } from 'bootstrap-vue'
-// import VueCookies from 'vue-cookies'
 
-// Vue.use(VueAwesomeSwiper)
 Vue.use(VueAwesomeSwiper)
-// Vue.use(Vue2Filters)
-// Vue.use(VueMasonryPlugin)
-// Vue.use(InfiniteLoading)
-// Vue.component('paypal-checkout', PayPal)
-// Vue.use(VueLazyLoad)
-// Vue.use(ProductZoomer)
-// Vue.use(VueScrollTo)
+Vue.use(VueLazyLoad)
+// Vue.use(LightBox)
 Vue.use(IconsPlugin)
-// Vue.use(VueCookies)
 
 
 const config = {

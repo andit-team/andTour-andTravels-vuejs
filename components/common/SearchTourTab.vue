@@ -280,95 +280,28 @@
         </div>
         <div class="col-lg-6 col-md-12">
 
-          <!-- <div v-swiper:mySwiper="swiperOption">
+          <div class="swiper" v-swiper="swiperOption">
             <div class="swiper-wrapper">
             
              <div class="swiper-slide"><img :src="require('@/assets/img/common-img/about-img.png')" alt="img" /></div>
              <div class="swiper-slide"><img :src="require('@/assets/img/common-img/about-img.png')" alt="img" /></div>
              <div class="swiper-slide"><img :src="require('@/assets/img/common-img/about-img.png')" alt="img" /></div>
              <div class="swiper-slide"><img :src="require('@/assets/img/common-img/about-img.png')" alt="img" /></div>
+             <div class="swiper-slide"><img :src="require('@/assets/img/common-img/about-img.png')" alt="img" /></div>
+             <div class="swiper-slide"><img :src="require('@/assets/img/common-img/about-img.png')" alt="img" /></div>
 
 
-              <div class="swiper-button-prev testi_prev" slot="button-prev"><i class="fas fa-angle-left"></i></div>
-              <div class="swiper-button-next testi_next" slot="button-next"><i class="fas fa-angle-right"></i></div>
             </div>
-          </div> -->
-          <!-- <div class="ab-slider">
-            <div class="slider-main-ab owl-carousel owl-theme">
-              <img src="assets/img/common-img/about-img.png" alt="img" />
-              <img src="assets/img/common-img/about-img.png" alt="img" />
-              <img src="assets/img/common-img/about-img.png" alt="img" />
-              <img src="assets/img/common-img/about-img.png" alt="img" />
-              <img src="assets/img/common-img/about-img.png" alt="img" />
-              <img src="assets/img/common-img/about-img.png" alt="img" />
-              <img src="assets/img/common-img/about-img.png" alt="img" />
-            </div>
-          </div> -->
 
-          <div class="col">
-            <div v-swiper:mySwiper="swiperOption">
-              <div class="swiper-wrapper popular-services-slider-wrap">
-                <!-- <div
-                  class="swiper-slide"
-                  v-for="(vehicle,index) in vehicles"
-                  :key="index"
-                > -->
-                  <!-- Home vehicle box Start -->
-                  <!-- <VehicleItem
-                  :vehicle="vehicle"
-                  :index="index"
-                  /> -->
-                  <!-- Home vehicle box End -->
-                <!-- </div> -->
+            <div class="swiper-button-prev" slot="button-prev"></div>
+            <div class="swiper-button-next" slot="button-next"></div>
+              <!-- <div class="swiper-pagination swiper-pagination-h" slot="pagination"></div> -->
 
+              <!-- <div class="swiper-button-prev testi_prev" slot="button-prev"></div>
+              <div class="swiper-button-next testi_next" slot="button-next"></div> -->
 
-                <div class="swiper-slide">
-                  <!-- Home vehicle box Start -->
-                  <nuxt-link to="/rides/ride-details" class="home-service-box">
-                      <img :src="require('@/assets/img/common-img/about-img.png')" alt="img" />
-                  </nuxt-link>
-                  <!-- Home vehicle box End -->
-                </div>
-                <div class="swiper-slide">
-                  <!-- Home vehicle box Start -->
-                  <nuxt-link to="/rides/ride-details" class="home-service-box">
-                      <img :src="require('@/assets/img/common-img/about-img.png')" alt="img" />
-                  </nuxt-link>
-                  <!-- Home vehicle box End -->
-                </div>
-                <div class="swiper-slide">
-                  <!-- Home vehicle box Start -->
-                  <nuxt-link to="/rides/ride-details" class="home-service-box">
-                      <img :src="require('@/assets/img/common-img/about-img.png')" alt="img" />
-                  </nuxt-link>
-                  <!-- Home vehicle box End -->
-                </div>
-                <div class="swiper-slide">
-                  <!-- Home vehicle box Start -->
-                  <nuxt-link to="/rides/ride-details" class="home-service-box">
-                      <img :src="require('@/assets/img/common-img/about-img.png')" alt="img" />
-                  </nuxt-link>
-                  <!-- Home vehicle box End -->
-                </div>
-                <div class="swiper-slide">
-                  <!-- Home vehicle box Start -->
-                  <nuxt-link to="/rides/ride-details" class="home-service-box">
-                      <img :src="require('@/assets/img/common-img/about-img.png')" alt="img" />
-                  </nuxt-link>
-                  <!-- Home vehicle box End -->
-                </div>
-                <div class="swiper-slide">
-                  <!-- Home vehicle box Start -->
-                  <nuxt-link to="/rides/ride-details" class="home-service-box">
-                      <img :src="require('@/assets/img/common-img/about-img.png')" alt="img" />
-                  </nuxt-link>
-                  <!-- Home vehicle box End -->
-                </div>
-
-              </div>
-              <div class="swiper-button-prev testi_prev" slot="button-prev"><i class="fas fa-angle-left"></i></div>
-              <div class="swiper-button-next testi_next" slot="button-next"><i class="fas fa-angle-right"></i></div>
-            </div>
+              <!-- <div class="swiper-button-prev testi_prev" slot="button-prev"><i class="fas fa-angle-left"></i></div>
+              <div class="swiper-button-next testi_next" slot="button-next"><i class="fas fa-angle-right"></i></div> -->
           </div>
 
         </div>
@@ -384,20 +317,33 @@ export default {
     return {
       imagepath: require('@/assets/img/common-img/map.png'),
       swiperOption: {
-        slidesPerView: 4,
+        slidesPerView: 1,
+        //  pagination: '.swiper-pagination',
+        // navigation: {
+        //   nextEl: '.testi_next',
+        //   prevEl: '.testi_prev'
+        // },
+        
         navigation: {
-          nextEl: '.testi_next',
-          prevEl: '.testi_prev'
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
         },
+        //  navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev'
+        //   },
+        
+        //  nextButton: '.swiper-button-next',
+        // prevButton: '.swiper-button-prev',
         spaceBetween: 20,
         freeMode: false,
         breakpoints: {
           1199: {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 20
           },
           991: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20
           },
           480: {
@@ -407,11 +353,17 @@ export default {
         }
       },
     }
-  }
+  },
 }
 </script>
 
 <style>
+.swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: 48%!important;
+}
+
+
 .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
 	pointer-events: auto;
 }
